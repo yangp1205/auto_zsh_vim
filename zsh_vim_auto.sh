@@ -13,8 +13,8 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh
 
 # 下载配置好的.zshrc、.vimrc
-curl -o .vimrc https://cloud.yangp1205.cn/index.php/s/NYDSbmNHP8aoL6t
-curl -o .zshrc https://cloud.yangp1205.cn/index.php/s/KFLIJpNPMMm3sSH
+curl -fLo .vimrc https://github.com/yangp1205/auto_zsh_vim/raw/master/vimrc
+curl -fLo .zshrc https://github.com/yangp1205/auto_zsh_vim/raw/master/zshrc
 
 # 安装zplug
 source  ~/.zshrc
