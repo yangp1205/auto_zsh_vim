@@ -69,37 +69,29 @@ func SetTitle()
         if filetype_name == '.sh'
                 call setline(1,"\#!/bin/bash")
                 call append(line("."), "\# File Name: ".expand("%"))
-                call append(line(".")+1, "\# Author: yangp")
-                call append(line(".")+2, "\# mail: yangp1997@gmail.com")
+                call append(line(".")+1, "\# Author: xxx")
+                call append(line(".")+2, "\# mail: xxx@gmail.com")
                 call append(line(".")+3, "\# Created Time: ".strftime("%c"))
                 call append(line(".")+4, "")
         elseif filetype_name == '.py'
                 call setline(1,"#!/usr/bin/python3")
                 call append(line("."), "# -*- coding:utf-8 -*-")
                 call append(line(".")+1, "\# File Name: ".expand("%"))
-                call append(line(".")+2, "\# Author: yangp")
-                call append(line(".")+3, "\# Mail: yangp1997@gmail.com ")
+                call append(line(".")+2, "\# Author: xxx")
+                call append(line(".")+3, "\# Mail: xxx@gmail.com ")
                 call append(line(".")+4, "\# Created Time: ".strftime("%c"))
                 call append(line(".")+6,"")
         else
                 call setline(1, "/*************************************************************************")
                 call append(line("."), " File Name: ".expand("%"))
-                call append(line(".")+1, "Author: yangp")
-                call append(line(".")+2, " Mail: yangp1997@gmail.com ")
+                call append(line(".")+1, "Author: xxx")
+                call append(line(".")+2, " Mail: xxx@gmail.com ")
                 call append(line(".")+3, " Created Time: ".strftime("%c"))
                 call append(line(".")+5, "")
         endif
                 "新建文件后，自动定位到文件末尾
 endfunc
     autocmd BufNewFile * normal G
-
-
-"Plugin 'Valloric/YouCompleteMe'
-"let g:ycm_min_num_of_chars_for_completion = 2  "开始补全的字符数"
-"let g:ycm_python_binary_path = 'python'  "jedi模块所在python解释器路径"
-"let g:ycm_seed_identifiers_with_syntax = 1  "开启使用语言的一些关键字查询"
-"let g:ycm_autoclose_preview_window_after_completion=1 "补全后自动关闭预览窗口"
-
 
 
 " Specify a directory for plugins
