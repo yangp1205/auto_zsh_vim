@@ -1,5 +1,20 @@
 #!/bin/bash
 
+
+## 安装应用
+apt_install(){
+    echo "Will install vim git zsh curl fzy!"
+    sudo apt update && sudo apt upgrade && sudo apt install vim git zsh curl wget autojump fzy python3-pip
+    return true
+}
+
+## 安装oh-my-zsh
+oh_my_zsh(){
+    echo "Install oh my zsh vim-plug zplug powerlevel10k" 
+    sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+    return true
+}
+
 ## 需要下载的文件和程序文件
 download_File(){
     cd ~ 
@@ -13,21 +28,13 @@ download_File(){
     echo "Download Success"
 }
 
-## 安装应用
-apt_install(){
-    echo "Will install vim git zsh curl fzy!"
-    sudo apt update && sudo apt upgrade && sudo apt install vim git zsh curl wget autojump fzy python3-pip
-}
-
 ## python3虚拟环境和autopep8
 config_env_python3(){
     pip3 install virtualenv virtualenvwrapper autopep8
 }
-
-## 安装oh-my-zsh
-oh_my_zsh(){
-    echo "Install oh my zsh vim-plug zplug powerlevel10k" 
-    sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+main(){
+    if read -q; then
+        apt_install
+    fi
 }
-
-
+main

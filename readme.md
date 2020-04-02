@@ -2,6 +2,16 @@
 
 摘要：_编写一个shell脚本，可以直接完成oh-my-zsh和vim的安装和常用插件配置，一般用于完成服务器的配置_
 
+## 添加普通用户
+
+创建用户并添加打root权限命令
+
+```bash
+useradd -m -s /bin/bash -p passsword name
+usermod -aG sudo name
+```
+
+
 ## zsh
 
 1. 需要将用户的shell切换未zsh（直接通过oh-my-zsh的脚本完成
